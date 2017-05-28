@@ -1,0 +1,19 @@
+<h1></h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Role(s)</th>
+      <th>Email</th>
+    </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><% if current_user.admin? && !current_user?(user) %>
+        <%= link_to "delete", user, method: :delete,
+          data: {confirm "Delete this user?"} %>
+        <% end %></td>
+    </tr>
+  <% end %>
+  </table>

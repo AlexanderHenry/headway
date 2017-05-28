@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     # root to: 'dashboard#show', as: :authenticated_root
-    root to: 'high_voltage/pages#show', id: 'welcome', as: :authenticated_root
+    root to: 'high_voltage/pages#show', id: 'users', as: :authenticated_root
   end
 
   devise_scope :user do

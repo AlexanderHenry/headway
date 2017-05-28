@@ -7,4 +7,8 @@ class UsersController < ApplicationController
     # view file has JS that will identify the anonymous user through segment
     # after registration via "after devise registration path"
   end
+
+  def users
+    @users = User.all
+  end
 end
