@@ -8,9 +8,9 @@ describe Canard::Abilities, '#chefs' do
   describe 'on Recipe' do
     let(:recipe) { FactoryGirl.create(:recipe) }
 
-    it { is_expected.to be_able_to(:read, recipe) }
-    it { is_expected.to be_able_to(:update, recipe) }
     it { is_expected.to be_able_to(:create, recipe) }
+    it { is_expected.to be_able_to(:read, recipe) }
+    it { is_expected.to be_able_to(:edit, recipe) }
   end
   # on Recipe
 end
