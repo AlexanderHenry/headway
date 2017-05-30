@@ -23,12 +23,12 @@ Rails.application.routes.draw do
 
   authenticated :user do
     # root to: 'dashboard#show', as: :authenticated_root
-    root to: 'high_voltage/pages#show', id: 'users', as: :authenticated_root
+    root to: 'users#index', id: 'index', as: :authenticated_root
   end
 
   devise_scope :user do
     get 'sign-in',  to: 'devise/sessions#new'
     get 'sign-out', to: 'devise/sessions#destroy'
   end
-  root 'high_voltage/pages#show', id: 'welcome'
+  root 'users#index', id: 'index'
 end
